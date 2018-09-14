@@ -1,0 +1,18 @@
+{
+    "name": "ArlyBot",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "endpoint": "http://localhost:3978/api/messages",
+            "id": "1cc06410-b799-11e8-9ed2-7f0c3229b7d7",
+            "name": "http://localhost:3978/api/messages"
+        }
+    ],
+    "secretKey": "",
+    "version": "2.0",
+    "overrides": null,
+    "path": "C:\\Users\\janpo\\Documents\\personal\\arlyBot\\ArlyBot.bot"
+}
