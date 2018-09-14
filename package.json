@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel src -d lib",
     "start": "npm run build && nodemon lib/index.js",
-    "dev": "nodemon --exec npm run babel-node -- ./index.js" 
+    "dev": "nodemon --exec npm run babel-node -- ./index.js",
+    "lint": "eslint"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,10 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-google": "^0.10.0",
+    "eslint-plugin-import": "^2.14.0"
   }
 }
