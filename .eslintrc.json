@@ -2,7 +2,8 @@
     "extends": "airbnb-base",
     "rules": {
       "linebreak-style": ["error", "windows"],
-      "no-console": 0
+      "no-console": 0,
+      "func-names": 0
   },
   "env": {
     "jest": true,
