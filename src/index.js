@@ -3,7 +3,7 @@ import restify from 'restify';
 import * as builder from 'botbuilder';
 // local Redux
 import loadStore from './loadStore';
-import * as DialogActions from './redux/actions/conversationalActions';
+import * as DialogActions from './redux/actions/dialogActions';
 
 // Setup in memory storage
 const inMemoryStorage = new builder.MemoryBotStorage();
@@ -27,6 +27,7 @@ bot.dialog('/', (session, result) => {
   // Edit more dialog here ❺
   session.send(`You said ${session.message.text}`);
   // Redux setup
+  console.log('Redux setup console log...');
   const store = loadStore(session);
   const { attachments, text } = session.message || {}; // What user sends
   if (attachments || result || text) {

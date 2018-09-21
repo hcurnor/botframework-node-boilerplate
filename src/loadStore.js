@@ -1,5 +1,5 @@
 import { applyMiddleware, createStore } from 'redux';
-import { createSagaMiddleware } from 'redux-saga';
+import createSagaMiddleware from 'redux-saga';
 // TODO: Combine all reducers
 // TODO: Combine all sagas
 import createDefaultSaga from './redux/sagas/default';

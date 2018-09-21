@@ -1,6 +1,6 @@
 import builder from 'botbuilder';
 import { takeEvery } from 'redux-saga';
-import DialogActions from '../actions/dialogActions';
+import * as DialogActions from '../actions/dialogActions';
 
 export default function* (session) {
   yield takeEvery(DialogActions.PROMPT_TEXT, function* (action) {
