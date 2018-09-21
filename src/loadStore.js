@@ -6,15 +6,16 @@ import reducer from './redux/reducers/index';
 
 export default function loadStore(sessionParam) {
   const session = sessionParam;
-  const saga = createSagaMiddleware();
+  const sagaMiddleware = createSagaMiddleware();
   const store = createStore(
+    // Combine all reducers
     reducer,
 
     // Restore the store from conversationData
     session.conversationData,
 
     applyMiddleware(
-      saga,
+      sagaMiddleware ,
       () => next => (action) => {
         // Send action to web page for debugging
         session.send({
@@ -41,7 +42,7 @@ export default function loadStore(sessionParam) {
     });
   });
 
-  saga.run(function* () {
+  sagaMiddleware.run(function* () {
     yield* createDialogSagas(session);
     yield* createDefaultSaga(session);
   });
