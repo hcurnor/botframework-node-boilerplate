@@ -1,22 +1,22 @@
-import builder from 'botbuilder';
+import * as builder from 'botbuilder';
 import { takeEvery } from 'redux-saga';
-import * as DialogActions from '../actions/dialogActions';
+import * as actionTypes from '../../constants/actionTypes';
 
 export default function* (session) {
-  yield takeEvery(DialogActions.PROMPT_TEXT, function* (action) {
+  yield takeEvery(actionTypes.PROMPT_TEXT, function* (action) {
     yield builder.Prompts.text(session, action.payload.text);
   });
 
-  yield takeEvery(DialogActions.END_CONVERSATION, function* () {
+  yield takeEvery(actionTypes.END_CONVERSATION, function* () {
     yield session.endConversation('Bye!');
   });
 
-  yield takeEvery(DialogActions.SEND_EVENT, function* (action) {
+  yield takeEvery(actionTypes.SEND_EVENT, function* (action) {
     const { name, value } = action.payload;
     yield session.send({ type: 'event', name, value });
   });
 
-  yield takeEvery(DialogActions.SEND_MESSAGE, function* (action) {
+  yield takeEvery(actionTypes.SEND_MESSAGE, function* (action) {
     const { attachments, text } = action.payload;
     const message = new builder.Message(session);
 

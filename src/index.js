@@ -27,7 +27,7 @@ bot.dialog('/', (session, result) => {
   // Edit more dialog here ❺
   session.send(`You said ${session.message.text}`);
   // Redux setup
-  console.log('Redux setup console log...');
+  console.log('Redux setup bacon and cheese...');
   const store = loadStore(session);
   const { attachments, text } = session.message || {}; // What user sends
   if (attachments || result || text) {

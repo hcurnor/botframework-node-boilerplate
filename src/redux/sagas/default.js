@@ -1,4 +1,4 @@
-import { put, select, takeEvery } from 'redux-saga';
+import { put, select, takeEvery } from 'redux-saga/effects';
 import { reset, setCity, setUsername } from '../actions/conversationalActions';
 import { RECEIVE_MESSAGE } from '../../constants/actionTypes';
 import { promptText, sendMessage, endConversation } from '../actions/dialogActions';
