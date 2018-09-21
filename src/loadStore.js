@@ -1,10 +1,8 @@
 import { applyMiddleware, createStore } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-// TODO: Combine all reducers
-// TODO: Combine all sagas
 import createDefaultSaga from './redux/sagas/default';
 import createDialogSagas from './redux/sagas/dialog';
-import reducer from './redux/reducers/dialogReducers';
+import reducer from './redux/reducers/index';
 
 export default function loadStore(sessionParam) {
   const session = sessionParam;
