@@ -31,10 +31,9 @@ Acknowledgments
 ## Todos
 This a list of currenlty implementations pending on the boilerplate.
 
-// Test reversing changes, and using alternativa saga combinator.
+[x] TODO: Refactor sagas, use rootSaga.
+[x] TODO: Combine all sagas and forEach apply session.
 
-[] TODO: Refactor sagas, use rootSaga.
-[] TODO: Combine all sagas and forEach apply session.
 [] TODO: Make a what is your name and greetins sample.
 [] TODO: Upload code as a boilerplate.
 [] TODO: Reachout Microsoft. - SABADO
