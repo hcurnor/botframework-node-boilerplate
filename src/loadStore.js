@@ -15,7 +15,7 @@ export default function loadStore(sessionParam) {
     session.conversationData,
 
     applyMiddleware(
-      sagaMiddleware ,
+      sagaMiddleware,
       () => next => (action) => {
         // Send action to web page for debugging
         session.send({
