@@ -44,6 +44,8 @@ function* watchSendEvent(session) {
   yield takeEvery(actionTypes.SEND_EVENT, sendEvent, session);
 }
 
+// Export sagas
+
 export default function* root(session) {
   yield [
     fork(watchPrompText, session),
