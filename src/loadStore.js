@@ -1,7 +1,6 @@
 import { applyMiddleware, createStore } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import createDefaultSaga from './redux/sagas/default';
-import createDialogSagas from './redux/sagas/dialog';
+import rootSaga from './redux/sagas/index';
 import reducer from './redux/reducers/index';
 
 export default function loadStore(sessionParam) {
@@ -42,10 +41,7 @@ export default function loadStore(sessionParam) {
     });
   });
 
-  sagaMiddleware.run(function* () {
-    yield* createDialogSagas(session);
-    yield* createDefaultSaga(session);
-  });
+  sagaMiddleware.run(rootSaga, session);
 
   return store;
 }
