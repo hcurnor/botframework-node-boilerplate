@@ -24,9 +24,12 @@ function* receiveMessageAction(action) {
   const { username } = yield select();
 
   if (!city) {
+    console.log('!!!!!!!!!!!!!!! NO CITY');
     city = 'Seattle';
 
     yield put(setCity(city));
+    console.log('AAAAAAAAAAAAAAAAAAAAATEEEENTIONNNNNNNNNN');
+    console.log(yield select().city);
     yield put(sendMessage(`Welcome to the Search City bot. I'm currently configured to search for things in ${city}`));
     yield put(promptText('Before get started, please tell me your name?'));
   } else if (!username) {
