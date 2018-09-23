@@ -33,10 +33,12 @@ This a list of currenlty implementations pending on the boilerplate.
 
 [x] TODO: Refactor sagas, use rootSaga.
 [x] TODO: Combine all sagas and forEach apply session.
+[x] TODO: Fix the demo functionality.
 
-[] TODO: Fix the demo functionality.
-[] TODO: Upload code as a boilerplate.s
+[] TODO: Upload code as a boilerplate.
+[] TODO: Write documentation.
 [] TODO: Reachout Microsoft. - SABADO
+
 [] TODO: Implement LUIS. - DOMINGO
 [] TODO: Trying LUIS model. - DOMINGO
 [] TODO: Develop the Arly fase 1. - SEMANA 2
