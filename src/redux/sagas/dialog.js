@@ -34,7 +34,7 @@ function* sendMessage(session, action) {
 function* watchSendMessage(session) {
   yield takeEvery(actionTypes.SEND_MESSAGE, sendMessage, session);
 }
-function* watchPrompText(session) {
+function* watchPropmtText(session) {
   yield takeEvery(actionTypes.PROMPT_TEXT, propmtText, session);
 }
 function* watchEndConversation(session) {
@@ -48,7 +48,7 @@ function* watchSendEvent(session) {
 
 export default function* root(session) {
   yield [
-    fork(watchPrompText, session),
+    fork(watchPropmtText, session),
     fork(watchEndConversation, session),
     fork(watchSendEvent, session),
     fork(watchSendMessage, session),
