@@ -1,13 +1,13 @@
-import { SET_USERNAME, RESET, SET_CITY } from '../../constants/actionTypes';
+import * as actionTypes from '../../constants/actionTypes';
 
 export function setUsername(username) {
-  return { type: SET_USERNAME, payload: { username } };
+  return { type: actionTypes.SET_USERNAME, payload: { username } };
 }
 
 export function setCity(city) {
-  return { type: SET_CITY, payload: { city } };
+  return { type: actionTypes.SET_CITY, payload: { city } };
 }
 
 export function reset() {
-  return { type: RESET };
+  return { type: actionTypes.RESET };
 }

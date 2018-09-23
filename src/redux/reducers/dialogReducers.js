@@ -1,4 +1,4 @@
-import { SET_USERNAME, RESET, SET_CITY } from '../../constants/actionTypes';
+import * as actionTypes from '../../constants/actionTypes';
 
 const defaultState = {
   city: null,
@@ -6,11 +6,11 @@ const defaultState = {
 };
 export default function conversationReduce(state = defaultState, action) {
   switch (action.type) {
-    case RESET:
+    case actionTypes.RESET:
       return defaultState;
-    case SET_CITY:
+    case actionTypes.SET_CITY:
       return { ...state, city: action.payload.city };
-    case SET_USERNAME:
+    case actionTypes.SET_USERNAME:
       return { ...state, username: action.payload.username };
     default:
       return state;
