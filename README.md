@@ -34,8 +34,8 @@ This a list of currenlty implementations pending on the boilerplate.
 [x] TODO: Refactor sagas, use rootSaga.
 [x] TODO: Combine all sagas and forEach apply session.
 
-[] TODO: Make a what is your name and greetins sample.
-[] TODO: Upload code as a boilerplate.
+[] TODO: Fix the demo functionality.
+[] TODO: Upload code as a boilerplate.s
 [] TODO: Reachout Microsoft. - SABADO
 [] TODO: Implement LUIS. - DOMINGO
 [] TODO: Trying LUIS model. - DOMINGO

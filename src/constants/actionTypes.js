@@ -1,5 +1,6 @@
 // Conversational
 export const SET_USERNAME = 'SET_USERNAME';
+export const SET_CITY = 'SET_CITY';
 export const RESET = 'RESET';
 // Dialog (bot-framework)
 export const PROMPT_TEXT = 'DIALOG/PROMPT_TEXT';
