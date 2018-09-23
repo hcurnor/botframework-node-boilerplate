@@ -12,6 +12,9 @@ import {
   endConversation,
 } from '../actions/dialogActions';
 
+// Since using multiple reducers to acces dialog
+export const getDialog = state => state.dialog;
+
 // Actions
 
 function* receiveMessageAction(action) {
@@ -20,16 +23,14 @@ function* receiveMessageAction(action) {
   const currentCityMatch = /^current city/i.exec(text);
   const resetMatch = /^reset/i.exec(text);
   const endConversationMatch = /^end conversation/i.exec(text);
-  let { city } = yield select();
-  const { username } = yield select();
+  let { city } = yield select(getDialog);
+  const { username } = yield select(getDialog);
 
   if (!city) {
     console.log('!!!!!!!!!!!!!!! NO CITY');
     city = 'Seattle';
 
     yield put(setCity(city));
-    console.log('AAAAAAAAAAAAAAAAAAAAATEEEENTIONNNNNNNNNN');
-    console.log(yield select().city);
     yield put(sendMessage(`Welcome to the Search City bot. I'm currently configured to search for things in ${city}`));
     yield put(promptText('Before get started, please tell me your name?'));
   } else if (!username) {
