@@ -1,5 +1,5 @@
 {
-    "name": "ArlyBot",
+    "name": "ArlyStores",
     "description": "",
     "services": [
         {
@@ -7,12 +7,12 @@
             "appId": "",
             "appPassword": "",
             "endpoint": "http://localhost:3978/api/messages",
-            "id": "1cc06410-b799-11e8-9ed2-7f0c3229b7d7",
+            "id": "1b98a0b0-046b-11e9-9d84-8b73cd8c656a",
             "name": "http://localhost:3978/api/messages"
         }
     ],
-    "secretKey": "",
+    "padlock": "",
     "version": "2.0",
     "overrides": null,
-    "path": "C:\\Users\\janpo\\Documents\\personal\\arlyBot\\ArlyBot.bot"
+    "path": "/Users/juanpablo/Desktop/botframework-node-boilerplate/ArlyStores.bot"
 }

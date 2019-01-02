@@ -4,6 +4,8 @@ import * as builder from 'botbuilder';
 // local Redux
 import loadStore from './loadStore';
 import * as DialogActions from './redux/actions/dialogActions';
+// DEV
+require('dotenv').config();
 
 // Setup in memory storage
 const inMemoryStorage = new builder.MemoryBotStorage();
@@ -27,15 +29,20 @@ server.post('/api/messages', connector.listen());
 // Bot Recognizers
 // =========================================================
 
-// const LuisAppID = process.env.LUIS_APP_ID; // Your-LUIS-App-ID
-// const LuisKey = process.env.LUIS_APP_KEY;  // Your-LUIS-Key
-// const LuisModel = `https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/${ LuisAppID }?subscription-key=${ LuisKey }`;
+// Your-LUIS-App-ID
+// const LuisAppID = process.env.LUIS_APP_ID;
+// Your-LUIS-Key
+// const LuisKey = process.env.LUIS_APP_KEY;
+// const LuisModel = `https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/${LuisAppID}?subscription-key=${LuisKey}`;
 // const recognizer = new builder.LuisRecognizer(LuisModel);
+
+// bot.recognizer(recognizer);
 
 // Dialogs
 bot.dialog('/', new builder.SimpleDialog((session, result) => {
   // Edit more dialog here ❺
   // session.send(`You said ${session.message.text}`);
+
   // Redux store setup
   const store = loadStore(session);
   const { attachments, text } = session.message || {}; // What user sends
