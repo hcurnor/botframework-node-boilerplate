@@ -9,7 +9,7 @@ function* propmtText(session, action) {
 }
 // End conversation
 function* endConversation(session) {
-  yield session.endConversation('Bye!');
+  yield session.endConversation('bye_messages_generic');
 }
 // Send Event
 function* sendEvent(session, action) {

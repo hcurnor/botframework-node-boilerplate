@@ -15,13 +15,13 @@ const connector = new builder.ChatConnector({
   appPassword: process.env.MICROSOFT_APP_PASSWORD || '',
 });
 
-const bot = new builder.UniversalBot(connector);
+const bot = new builder.UniversalBot(connector, {
+  localizerSettings: {
+    defaultLocale: 'es',
+  },
+});
 
 bot.set('storage', inMemoryStorage); // Register in memory storage
-
-bot.set('localizerSettings', { // Configure bots default locale and locale folder path.
-  defaultLocale: 'es',
-});
 
 // Setting up the server
 const server = restify.createServer();
@@ -61,7 +61,7 @@ bot.dialog('/', new builder.SimpleDialog((session, result) => {
 bot.dialog('GreetingDialog',
   (session) => {
     session.send('You reached the Greeting intent. You said \'%s\'.', session.message.text);
-    session.endDialog();
+    session.endDialog('bye_messages_generic');
   }).triggerAction({
   matches: 'Greetings',
 });
