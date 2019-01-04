@@ -1,10 +1,11 @@
 // Custom intents of the Arly-Core-Intents from LUIS
 export default [
+  'Goodbye', // done
+  'Greetings', // done
   'AttentionSchedule',
   'BotInfo',
   'CreateIssue',
   'EventInformation',
-  'Goodbye',
   'HowTo',
   'ManageIssue',
   'None',

@@ -1,6 +1,7 @@
 
 # Microsoft Bot-framework boilerplate
 ## Using Node, Redux, Babel & ES6
+LUIS already setup.
 
 ![Microsoft Botframework](https://www.topbots.com/wp-content/uploads/2017/02/microsoft_bot_framework_800x350_web.jpg "Logo botframework")
 
@@ -24,7 +25,32 @@ npm start
 ## Emulator
 This bot runs by default on **localhost:3978**, which you can run directly using the Bot [Framework Emulator](https://github.com/Microsoft/BotFramework-Emulator).
 
+## LUIS - Language Understanding
+Make sure you setup in Azure your LUIS account and copy your credentials in the **.env.example** and create your **.env** with your own credentials.
 
+```
+cp .env.example .env
+```
+
+## Debug
+
+If you are using VS Code, make sure you have setup the ES6 debug in **launch.json**
+```
+"configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/src/index.js",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
+      "cwd": "${workspaceFolder}",
+      "sourceMaps": true,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+```
 
 ## Build
 

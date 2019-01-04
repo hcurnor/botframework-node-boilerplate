@@ -1,5 +1,5 @@
 {
-  "hello_messages_generic": ["Hola!", "Hola :P", "Hola :)", "Aloha"],
+  "hello_messages_generic": ["Hola, ¿como te puedo ayudar?", "Hola. Dime que necesitas?", "Hola :)", "Aloha, dime como puedo ayudarte"],
   "bye_messages_generic": ["Adios", "Bye"],
   "hello_messages": ["Hola %s! :)", "%s Hola ;)", "Hoola :P", "Aloha %s"],
   "help_message": ["Dime que necesitas?", "En que te puedo ayudar?", "solo dime ;)", "preguntame lo que necesites"], 

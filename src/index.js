@@ -58,10 +58,29 @@ bot.dialog('/', new builder.SimpleDialog((session, result) => {
   }
 }));
 
+// General
 bot.dialog('GreetingDialog',
   (session) => {
-    session.send('You reached the Greeting intent. You said \'%s\'.', session.message.text);
-    session.endDialog('bye_messages_generic');
+    session.send('hello_messages_generic');
   }).triggerAction({
   matches: 'Greetings',
+});
+
+bot.dialog('GoodbyeDialog',
+  (session) => {
+    session.endDialog('bye_messages_generic');
+  }).triggerAction({
+  matches: 'Goodbye',
+});
+
+// Product Information
+bot.dialog('ProductInfoDialog',
+  (session, args) => {
+    console.log('-- #attention');
+    console.log(session);
+    console.log(args.intent.entities);
+    console.log('-- #attention end');
+    session.send('Product information');
+  }).triggerAction({
+  matches: 'ProductInformation',
 });
