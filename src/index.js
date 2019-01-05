@@ -4,6 +4,7 @@ import * as builder from 'botbuilder';
 // local Redux
 import loadStore from './loadStore';
 import * as DialogActions from './redux/actions/dialogActions';
+import * as ProductActions from './redux/actions/productActions';
 // DEV
 require('dotenv').config();
 
@@ -26,7 +27,7 @@ bot.set('storage', inMemoryStorage); // Register in memory storage
 // Setting up the server
 const server = restify.createServer();
 server.listen(process.env.PORT || 3978, () => {
-  console.log(`Server listening to 3978 ${process.env.PORT || 3978}`);
+  console.log(`Server listening to ${process.env.PORT || 3978}`);
 });
 
 server.post('/api/messages', connector.listen());
@@ -76,11 +77,12 @@ bot.dialog('GoodbyeDialog',
 // Product Information
 bot.dialog('ProductInfoDialog',
   (session, args) => {
-    console.log('-- #attention');
-    console.log(session);
-    console.log(args.intent.entities);
-    console.log('-- #attention end');
-    session.send('Product information');
+    const store = loadStore(session);
+    const { attachments, text } = session.message || {}; // What user sends
+    const { entities } = args.intent;
+    if (attachments || text) {
+      store.dispatch(ProductActions.requestInfo(text, entities));
+    }
   }).triggerAction({
   matches: 'ProductInformation',
 });

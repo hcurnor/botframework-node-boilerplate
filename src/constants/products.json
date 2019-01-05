@@ -1,0 +1,51 @@
+{
+  "iphone": {
+    "price": 7000,
+    "color": ["blanco", "rojo", "negro", "dorado", "rosado"],
+    "title": "Apple Iphone X . 16GB",
+    "subTitle": "Con Apple Care",
+    "description": "En 16, 32 y 64 desbloqueado.",
+    "image": "https://i.ibb.co/hHfZkXq/iphone7plus-colors.jpg",
+    "stock": {
+      "total": 5,
+      "stores:": {
+        "online": 3,
+        "Miraflores": 1,
+        "Oakland": 1
+      }
+    }
+  },
+  "xbox": {
+    "price": 4000,
+    "title": "Microsoft Xbox One 1TB",
+    "subTitle": "100% buen estado y garantia de 1 año",
+    "description": "consola de video juegos para toda la familia",
+    "color": ["negro", "blanco"],
+    "image": "https://i.ibb.co/G58d9kj/xbox-one.jpg",
+    "stock": {
+      "total": 5,
+      "stores:": {
+        "online": 3,
+        "Miraflores": 1,
+        "Oakland": 1
+      }
+    }
+  },
+  "blazer": {
+    "price": 500,
+    "color": ["negro", "blanco"],
+    "talla": ["m", "s"],
+    "title": "Blazer casual",
+    "subTitle": "Blazer marca Zara para hombre",
+    "description": "En tallas m y s.",
+    "image": "https://i.ibb.co/W054F4T/blazer.jpg",
+    "stock": {
+      "total": 5,
+      "stores:": {
+        "online": 3,
+        "Miraflores": 1,
+        "Oakland": 1
+      }
+    }
+  }
+}

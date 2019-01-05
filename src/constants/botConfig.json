@@ -1,0 +1,29 @@
+{
+  "botName": "Chopi Bot",
+  "businessName": "Ventas Guatemala S.A.",
+  "currency": "USD",
+  "email": ["info@chopinmol.com", "ventas@chopinmol.com"],
+  "mainAdress": "Guatemala, 20 calle 8-00 Z.10",
+  "telephone": ["5757-5757", "8824-2425"],
+  "shippingCost": 30,
+  "stores": {
+    "online": {
+      "address": "www.chopinmol.com",
+      "telephone": ["5757-5757", "8824-2425"],
+      "hours": "Siempre esta abierto",
+      "description": "tiena en linea"
+    },
+    "Oakland": {
+      "address": "C.C. Oakland Mall Z.10 Local 525 Segundo Nivel",
+      "telephone": ["4566-5757", "9853-2425"],
+      "hours": "7am - 5pm, lunes a viernes",
+      "description": "tiena en de Oakland Mall"
+    },
+    "Miraflores": {
+      "address": "C.C. Miraflores Z.7 Local 2 Primer Nivel",
+      "telephone": ["4566-5757", "5555-2425"],
+      "hours": "7am - 5pm, lunes a viernes",
+      "description": "tiena de Miraflores"
+    }
+  }
+}

@@ -47,5 +47,16 @@
   "missing_location": "El clima de que lugar?",
   "weather_result_current": "El clima actual para %s es de %d grados centigrados y %s",
   "weather_result_time": "El clima para %s el %d/%d/%d %d:%02d%s",
-  "weather_result_error": "Disculpa, se ha producido un erro a la hora de recuperar el clima"
+  "weather_result_error": "Disculpa, se ha producido un erro a la hora de recuperar el clima",
+  "product_info_requested_success": "El %s en %s %s, si existe",
+  "product_info_requested_fail": "El %s en %s %s, si existe",
+  "product_missing": "No entiendo cual es el producto que quieres cotizar. Puedes repetirlo?",
+  "product_property_found": "Si, tenemos %s en %s %s",
+  "product_property_not_found": "Si tenemos %s pero no en %s %s",
+  "product_missing_info": "En un %s que es %s ?",
+  "product_call_to_action": "Puedes cotizar el producto en la página: http://www.chopinmol.com",
+  "product_error": "No entiendo que quieres saber del %s, puedes decirlo de nuevo de forma diferente ?",
+  "product_entities_error": "Entiendo que quieres información de un producto, pero no entiendo a que te refieres. Puedes repetirlo de un modo distinto lo que necesitas saber?",
+  "product_not_found": "No hemos encontrado %s en nuestra tienda :(",
+  "product_value_missing": "Puedes repetirlo, no he entendio que %s"
 }

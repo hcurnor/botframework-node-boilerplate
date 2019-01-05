@@ -18,10 +18,12 @@ function* sendEvent(session, action) {
 }
 // Send message
 function* sendMessage(session, action) {
-  const { attachments, text } = action.payload;
+  const { attachments, text, args } = action.payload;
   const message = new builder.Message(session);
 
-  if (text) {
+  if (text && args) {
+    message.text(text, ...args);
+  } else {
     message.text(text);
   }
   if (attachments) {

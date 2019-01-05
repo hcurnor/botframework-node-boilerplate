@@ -3,7 +3,8 @@
     "rules": {
       "linebreak-style": ["error", "unix"],
       "no-console": 0,
-      "func-names": 0
+      "func-names": 0,
+      "no-new-object": 0
   },
   "env": {
     "jest": true,

@@ -18,10 +18,10 @@ export function sendEvent(name, value) {
   };
 }
 
-export function sendMessage(text, attachments) {
+export function sendMessage(text, args, attachments) {
   return {
     type: actionTypes.SEND_MESSAGE,
-    payload: { attachments, text },
+    payload: { text, args, attachments },
   };
 }
 

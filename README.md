@@ -74,4 +74,8 @@ This project is licensed under the MIT License.
 ## Todos
 This a list of currenlty implementations pending on the boilerplate.
 
- - Implement LUIS.
+ - welcome message
+ - shipping dialog - intent
+ - company info dialog - intent
+ - payment info dialog - intent
+ - bot info dialog - intent
