@@ -9,6 +9,12 @@ yarn-error.log*
 .vscode
 vscode
 
+# MAC ENV
+ .DS_Store
+locale/.DS_Store
+src/.DS_Store
+src/redux/.DS_Store
+
 # Runtime data
 pids
 *.pid
