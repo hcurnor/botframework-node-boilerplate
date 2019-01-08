@@ -2,10 +2,13 @@
   "botName": "Chopi Bot",
   "businessName": "Ventas Guatemala S.A.",
   "currency": "USD",
+  "contactEmail": "jp@calaps.com",
   "email": ["info@chopinmol.com", "ventas@chopinmol.com"],
-  "mainAdress": "Guatemala, 20 calle 8-00 Z.10",
+  "address": ["Guatemala, 20 calle 8-00 Z.10"],
   "telephone": ["5757-5757", "8824-2425"],
-  "shippingCost": 30,
+  "hours": ["Las 24 horas del dia."],
+  "shippingCost": 30.00,
+  "paymentText": "Contamos con diferentes medios de pago: \n Tarjeta de débito/crédito \n Visacuotas o Mastercoutas \n Desde Q1,000 en adelante \n Hasta 6 meses sin intereses \n Transferencia o depósito \n Banco Industrial y Banrural \n Efectivo contra entrega \n Máximo de Q3,000 \n",
   "stores": {
     "online": {
       "address": "www.chopinmol.com",

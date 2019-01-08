@@ -1,11 +1,11 @@
 {
-  "hello_messages_generic": ["Hola, ¿como te puedo ayudar?", "Hola. Dime que necesitas?", "Hola :)", "Aloha, dime como puedo ayudarte"],
+  "hello_messages_generic": ["Hola soy Chopi, ¿como te puedo ayudar?", "Hola. Dime que necesitas? Chopi te puede ayudar", "Hola :) soy Chopi y estoy para ayudarte", "Aloha, dime como puedo ayudarte. Soy Chopi"],
+  "default_message": ["De momento no conozco la respuesta para eso, pero la averiguare. Si necesitas ayuda mas personalizada puedes pedir hablar con un humano", "No conozco la respuesta para tu pregunta, dejame preguntarlo y en unos momentos estare contigo. Si necesitas ayuda inmediata te puedes comunicar a nuestros numeros.", "Eso es nuevo para mi, puedes probar con otra pregunta."],
   "bye_messages_generic": ["Adios", "Bye"],
   "hello_messages": ["Hola %s! :)", "%s Hola ;)", "Hoola :P", "Aloha %s"],
-  "help_message": ["Dime que necesitas?", "En que te puedo ayudar?", "solo dime ;)", "preguntame lo que necesites"], 
+  "help_message": ["Dime que necesitas? Estoy para contestar tus preguntas.", "En que te puedo ayudar? Dime lo que quieras", "solo dime ;) pregunta y tratare de ayudarte.", "preguntame lo que necesites saber."], 
   "language_message": "Español",
   "ok_message": "(Y)",
-  "default_message": ["Disculpa, no he entenido...", "Aún no soy tan lista para entender eso :(", "Eso es nuevo para mi", "Perdón no se como ayudarte con eso :/"],
   "thanks_message": ["De nada :)", ";)" , "Si necesitas otra cosa solo dime!"],
   "soon_message": ["En poco tiempo podre realizar esta función, me falta poco para aprender :D"],
   "openApp_message": ["Si quieres abrir un app preguntale a Siri ;), desde el chat de Facebook no puedo abrir apps :(", "pronto estare en Android y IOS y te ayudare con eso!", "Que tanto te cuesta presionar un boton?"],
@@ -58,5 +58,13 @@
   "product_error": "No entiendo que quieres saber del %s, puedes decirlo de nuevo de forma diferente ?",
   "product_entities_error": "Entiendo que quieres información de un producto, pero no entiendo a que te refieres. Puedes repetirlo de un modo distinto lo que necesitas saber?",
   "product_not_found": "No hemos encontrado %s en nuestra tienda :(",
-  "product_value_missing": "Puedes repetirlo, no he entendio que %s"
+  "product_value_missing": "Puedes repetirlo, no he entendio que %s",
+  "info_missing": "No entiendo bien que es lo que deseas saber, telefonos email?",
+  "business_info_found": "El %s es %s %s",
+  "business_info_open": ["Nuestra tienda en linea, chopinmol.com esta siempre abierta y en linea funcionando las 24 horas", "Chopinmol.com esta abierto siempre para que puedas hacer tu pedido."],
+  "business_info_not_found": "No he encontrado resultados para %s",
+  "business_info_missing": "Buena pregunta, no han alimentado esta información en mi base de datos aún.",
+  "business_info_shipping": "El envío tiene un costo de %s. Trabajamos con GuatEx y Cargo Expreso",
+  "help_human_success": "Hemos enviado un mensaje exitosamente. Pronto estaremos en contacto contigo con atención especial para darle seguimiento a tu caso con un asistente humano",
+  "help_human_success_error": "Disculpa, ha ocurrido un error y en estos momentos no pude contactar a soporte directamente. Estamos trabajando en ello."
 }

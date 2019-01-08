@@ -10,3 +10,8 @@ export const SEND_MESSAGE = 'DIALOG/SEND_MESSAGE';
 export const END_CONVERSATION = 'DIALOG/END_CONVERSATION';
 // Product Information
 export const PRODUCT_INFO = 'DIALOG/PRODUCT_INFO';
+// Business Information
+export const BUSINESS_INFO = 'DIALOG/BUSINESS_INFO';
+export const SHIPPING_INFO = 'DIALOG/SHIPPING_INFO';
+// Help
+export const TALK_HUMAN = 'DIALOG/TALK_HUMAN';

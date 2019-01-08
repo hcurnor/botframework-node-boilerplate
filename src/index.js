@@ -1,10 +1,14 @@
 // Bot-framework
 import restify from 'restify';
 import * as builder from 'botbuilder';
+// LUIS INTENTS
+import HOISTED_LUIS_INTENTS from './constants/hoistedLuisIntents';
 // local Redux
 import loadStore from './loadStore';
-import * as DialogActions from './redux/actions/dialogActions';
+// import * as DialogActions from './redux/actions/dialogActions';
 import * as ProductActions from './redux/actions/productActions';
+import * as HelpActions from './redux/actions/helpActions';
+import * as BusinessActions from './redux/actions/businessActions';
 // DEV
 require('dotenv').config();
 
@@ -52,26 +56,19 @@ bot.recognizer(recognizer);
 // Default
 bot.dialog('/', new builder.SimpleDialog((session, result) => {
   // Redux store setup
-  const store = loadStore(session);
   const { attachments, text } = session.message || {}; // What user sends
   if (attachments || result || text) {
-    store.dispatch(DialogActions.receiveMessage(text, attachments, result));
+    session.send('default_message');
   }
 }));
 
-// General
-bot.dialog('GreetingDialog',
-  (session) => {
-    session.send('hello_messages_generic');
-  }).triggerAction({
-  matches: 'Greetings',
-});
-
-bot.dialog('GoodbyeDialog',
-  (session) => {
-    session.endDialog('bye_messages_generic');
-  }).triggerAction({
-  matches: 'Goodbye',
+HOISTED_LUIS_INTENTS.forEach((intent) => {
+  bot.dialog(`/${intent.dialog}`,
+    (session) => {
+      session.send(intent.locale);
+    }).triggerAction({
+    matches: intent.matches,
+  });
 });
 
 // Product Information
@@ -85,4 +82,43 @@ bot.dialog('ProductInfoDialog',
     }
   }).triggerAction({
   matches: 'ProductInformation',
+});
+
+// Business Information
+bot.dialog('BusinessInfoDialog',
+  (session, args) => {
+    const store = loadStore(session);
+    const { attachments, text } = session.message || {}; // What user sends
+    const { entities } = args.intent;
+    if (attachments || text) {
+      store.dispatch(BusinessActions.requestInfo(text, entities));
+    }
+  }).triggerAction({
+  matches: 'RequestInfo',
+});
+
+// Shipping Information
+bot.dialog('ShippingDialog',
+  (session, args) => {
+    const store = loadStore(session);
+    const { attachments, text } = session.message || {}; // What user sends
+    const { entities } = args.intent;
+    if (attachments || text) {
+      store.dispatch(BusinessActions.shippingInfo(text, entities));
+    }
+  }).triggerAction({
+  matches: 'ShipingInfo',
+});
+
+// Request to talk to a human
+bot.dialog('TalkToHumanDialog',
+  (session, args) => {
+    const store = loadStore(session);
+    const { attachments, text } = session.message || {}; // What user sends
+    const { entities } = args.intent;
+    if (attachments || text) {
+      store.dispatch(HelpActions.talkToHuman(text, entities));
+    }
+  }).triggerAction({
+  matches: 'TalkToHuman',
 });
