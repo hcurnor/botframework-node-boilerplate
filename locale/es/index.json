@@ -64,7 +64,7 @@
   "business_info_open": ["Nuestra tienda en linea, chopinmol.com esta siempre abierta y en linea funcionando las 24 horas", "Chopinmol.com esta abierto siempre para que puedas hacer tu pedido."],
   "business_info_not_found": "No he encontrado resultados para %s",
   "business_info_missing": "Buena pregunta, no han alimentado esta información en mi base de datos aún.",
-  "business_info_shipping": "El envío tiene un costo de %s. Trabajamos con GuatEx y Cargo Expreso",
-  "help_human_success": "Hemos enviado un mensaje exitosamente. Pronto estaremos en contacto contigo con atención especial para darle seguimiento a tu caso con un asistente humano",
+  "business_info_shipping": "El envío tiene un costo de %s. Trabajamos con GuatEx y Cargo Expreso. De 3 a 6 dias hábiles.",
+  "help_human_success": "Listo, hemos enviado un mensaje exitosamente. Tu solicitud ha sido escalada a un humano. Pronto estaremos en contacto contigo con atención especial para darle seguimiento.",
   "help_human_success_error": "Disculpa, ha ocurrido un error y en estos momentos no pude contactar a soporte directamente. Estamos trabajando en ello."
 }

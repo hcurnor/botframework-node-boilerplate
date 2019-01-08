@@ -2,38 +2,31 @@ import { put, takeEvery, fork } from 'redux-saga/effects';
 import nodemailer from 'nodemailer';
 import { TALK_HUMAN } from '../../constants/actionTypes';
 import { sendMessage } from '../actions/dialogActions';
+import botConfig from '../../constants/botConfig';
+
+require('dotenv').config();
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'noreplychopinmol@gmail.com',
-    pass: 'baconbacon',
+    user: process.env.EMAIL_SENT,
+    pass: process.env.EMAIL_PASSWORD,
   },
 });
 
-const mailOptions = {
-  from: 'noreplychopinmol@gmail.com',
-  to: 'jp@calaps.com',
-  subject: 'Seguimiento a cliente por Chopi Bot',
-  text: 'El usuario a solicitado atención humana.',
-};
-
 function* talkToHumanAction() {
-  let ok = false;
-  transporter.sendMail(mailOptions, (error, info) => {
+  const mailOptions = {
+    from: process.env.EMAIL_SENT,
+    to: botConfig.contactEmail,
+    subject: 'Chopibot - Requiere de tu intervension',
+    text: 'Revisa las conversaciones, un usuario ha solicitado intervención humana.',
+  };
+  transporter.sendMail(mailOptions, (error) => {
     if (error) {
       console.log(error);
-    } else {
-      ok = true;
-      console.log('Email sent: ', info.response);
     }
   });
-  console.log('mostazasssss: ', ok);
-  if (ok === true) {
-    yield put(sendMessage('contact_to_humman'));
-  } else {
-    yield put(sendMessage('help_human_success_error'));
-  }
+  yield put(sendMessage('help_human_success'));
 }
 
 // Action watcher
