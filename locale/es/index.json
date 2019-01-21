@@ -7,7 +7,7 @@
   "language_message": "Español",
   "ok_message": "(Y)",
   "thanks_message": ["De nada :)", ";)" , "Si necesitas otra cosa solo dime!"],
-  "soon_message": ["En poco tiempo podre realizar esta función, me falta poco para aprender :D"],
+  "soon_message": ["Función pendiente para la siguiente versión."],
   "openApp_message": ["Si quieres abrir un app preguntale a Siri ;), desde el chat de Facebook no puedo abrir apps :(", "pronto estare en Android y IOS y te ayudare con eso!", "Que tanto te cuesta presionar un boton?"],
   "opinion_message": ["Realmente no puedo dar opiniones propias :p" , "Pronto te podre dar mis opiniones", "Para que quieres la opinion de una robot? haha"],
   "ready_message": "Listo %s !",
