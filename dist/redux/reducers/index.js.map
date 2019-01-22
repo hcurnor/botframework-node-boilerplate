@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/redux/reducers/index.js"],"names":["dialog","dialogReducers"],"mappings":"2EAAA;AACA,kD;;AAEe,4BAAgB;AAC7BA,UAAQC,wBADqB,EAAhB,C","file":"index.js","sourcesContent":["import { combineReducers } from 'redux';\nimport dialogReducers from './dialogReducers';\n\nexport default combineReducers({\n  dialog: dialogReducers,\n});\n"]}
