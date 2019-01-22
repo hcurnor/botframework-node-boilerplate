@@ -48,7 +48,6 @@ build/
 build/Release
 
 # Dependency directories
-node_modules/
 jspm_packages/
 
 # Typescript v1 declaration files
@@ -69,6 +68,3 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 yarn.lock
-
-# dotenv environment variables file
-.env
